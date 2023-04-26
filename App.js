@@ -4,6 +4,7 @@ import {
   View,
   Image,
   Dimensions,
+  ScrollView
 } from 'react-native';
 import { CustomButton } from './components/CustomButton';
 
@@ -19,11 +20,11 @@ export default function App() {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.textHeader}>Janaina Ferreira</Text>
-        <Text style={styles.textBody}>
-          Hello guys, my name is Janaina Ferreira!
-          I'm from Colombia and am really cheerful to be
-          here. Contact me and let's start talking!
-        </Text>
+        <ScrollView style={styles.innerContainer}>
+          <Text style={styles.textBody}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur nulla sed dapibus venenatis. Nulla tristique erat justo, quis aliquet erat accumsan eget. Donec ultricies tellus quam, sit amet consectetur tortor dictum sit amet. Quisque blandit, sapien a cursus malesuada, tellus sem feugiat eros, in suscipit tellus est nec dolor. Ut vel odio augue. Nunc malesuada purus nec augue blandit feugiat. Donec in finibus nibh, eget ultricies massa. Fusce molestie ultrices ligula, ut accumsan ex sodales suscipit. Integer mollis neque sed orci feugiat laoreet. Fusce ultrices molestie nisi, non elementum erat tempus quis. Mauris vitae sem ut ante tincidunt luctus. Nam non ullamcorper magna. Aenean molestie urna non molestie tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer auctor fermentum orci. Praesent congue quis odio in tincidunt. 
+          </Text>
+        </ScrollView>
       </View>
       <View style={styles.buttonSection}>
         <CustomButton
@@ -44,6 +45,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  innerContainer: {
+    marginBottom: 20
   },
   imageContainer: {
     flex: 4,
@@ -69,14 +73,16 @@ const styles = StyleSheet.create({
     fontFamily: 'serif',
     fontSize: 28,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
+    margin: 20
   },
   textBody: {
     fontFamily: 'serif',
     fontSize: 20,
     fontWeight: '400',
     textAlign: 'justify',
-    margin: 20
+    marginLeft: 20,
+    marginRight: 20
   },
   buttonSection: {
     flex: 1,
