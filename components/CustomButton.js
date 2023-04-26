@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 
 const CustomButton = ({text, hexBaseColor}) => {
-    const fiftyPerTransparent = hexBaseColor + 'CC'; // 90% transparency.
+    const fiftyPerTransparent = hexBaseColor + 'CC'; // 80% transparency.
     const [backgroundColor, setBackgroundColor] = useState(fiftyPerTransparent);  
     return (
         <Pressable
